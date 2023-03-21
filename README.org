@@ -1,0 +1,17 @@
+#+title: dotfiles
+#+author: Benjamin Philip
+* The What?
+
+This repository has all my dotfiles for programs such as emacs, zsh, git and
+more!
+
+* The Why?
+
+Till now I've not had my dotfiles (except my emacs config) under version
+control. I've come to the conclusion that dotfiles are very easy to break, and
+so have decided to put them under git. Plus it easier to migrate a different
+computer now!
+
+* The Ugly (i.e. the How?)
+
+The dotfiles are managed with the help of GNU Stow.
