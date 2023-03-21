@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+
+# A hook script to prepare the commit log message.
+#
+# I would like to have all commits to packages to have the
+# package name included in the commit message. For example,
+# the following:
+#
+#   [emacs] Setup company-mode
+#
+# In the case of updates to multiple packages, all packages
+# need to be included in the commit message:
+#
+#   [emacs, zsh] Fix issues with $PATH
+#
+# If mentioning the 2nd package is redundant, I can always
+# remove it from the log.
+
+
+COMMIT_MSG_FILE=$(readlink -f $1)
+COMMIT_SOURCE=$2
+SHA1=$3
+
+cd $(git rev-parse --show-toplevel)
+
+updated_dirs=$(git diff --name-only --staged | xargs -L1 readlink -f | xargs -L1 dirname | uniq | grep -v 'dotfiles$')
+
+package_dirs=""
+for dir in $updated_dirs; do
+    if [[ -e $dir/.stow-local-ignore ]]; then
+        package_dirs="$package_dirs $(basename $dir)"
+    fi
+done
+
+package_dirs="${package_dirs:1}"
+package_dirs=${package_dirs/ /, }
+
+if ! [ -z $package_dirs ]; then
+   sed -i "1s/.*/[$package_dirs] \n/" $COMMIT_MSG_FILE
+fi
