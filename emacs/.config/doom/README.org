@@ -1,0 +1,20 @@
+#+title: Emacs config
+* What?
+
+This directory contains my emacs config, managed with [[https://github.com/doomemacs/doomemacs][Doom Emacs]].
+
+* Setup
+
+First you need to stow the config:
+
+#+begin_src bash
+  stow emacs
+#+end_src
+
+Then you need to install doom:
+
+#+begin_src bash
+  git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+  ln -s ~/.config/emacs/bin/doom ~/.local/bin/doom
+  doom install
+#+end_src
