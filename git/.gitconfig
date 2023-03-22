@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Benjamin Philip
+	email = benjamin.philip495@gmail.com
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpUser = benjamin.philip495@gmail.com
+	smtpServerPort = 587
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[push]
+	autoSetupRemote = true

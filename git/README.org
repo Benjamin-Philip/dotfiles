@@ -1,0 +1,7 @@
+#+title: Git config
+
+This directory has my git config. You can set it up with stow:
+
+#+begin_src bash
+stow git
+#+end_src
