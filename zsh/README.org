@@ -1,0 +1,26 @@
+#+title: ZSH
+
+* What?
+
+This directory contains my zsh config, which uses ohmyzsh.
+
+* Setup
+
+First install ohmyzsh:
+
+#+begin_src bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#+end_src
+
+Then remove the generated files:
+
+#+begin_src bash
+rm ~/.zshrc
+rm ~/.zshenv
+#+end_src
+
+Finally stow!:
+
+#+begin_src bash
+stow zsh
+#+end_src
