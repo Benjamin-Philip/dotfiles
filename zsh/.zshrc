@@ -103,6 +103,7 @@ alias et="/usr/bin/emacs -nw -Q"
 
 alias rebar3="/home/ben/.cache/rebar3/bin/rebar3"
 alias rebar="rebar3"
+alias rbr="rebar3"
 
 [ -f "/home/ben/.ghcup/env" ] && source "/home/ben/.ghcup/env" # ghcup-env
 
