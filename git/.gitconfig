@@ -13,3 +13,5 @@
 	helper = store
 [push]
 	autoSetupRemote = true
+[pager]
+	diff = delta -s
