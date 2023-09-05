@@ -2,7 +2,7 @@
 # export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ben/.oh-my-zsh"
+export ZSH="/home/bphilip/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,7 +105,7 @@ alias rebar3="/home/ben/.cache/rebar3/bin/rebar3"
 alias rebar="rebar3"
 alias rbr="rebar3"
 
-[ -f "/home/ben/.ghcup/env" ] && source "/home/ben/.ghcup/env" # ghcup-env
+[ -f "/home/bphilip/.ghcup/env" ] && source "/home/bphilip/.ghcup/env" # ghcup-env
 
 # Set number of default threads on make to 8
 export GNUMAKEFLAGS=-j9
