@@ -1,0 +1,14 @@
+#+title: Emacs Config
+* What?
+
+This directory contains my [[https://www.byobu.org/][byobu]] config.
+
+* Setup
+
+Stow the config:
+
+#+begin_src bash
+    stow byobu
+#+end_src
+
+then install byobu along with tmux (or if you prefer, screen).
