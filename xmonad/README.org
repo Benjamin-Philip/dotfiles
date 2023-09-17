@@ -1,0 +1,13 @@
+#+title: XMonad config
+* What?
+
+This directory contains my xmonad config.
+
+* Setup
+
+First you will need a working installation of ghc and stack, preferably installed with
+ghcup. You will then need to install all the devel dependencies for [[https://xmonad.org/INSTALL.html#dependencies][xmonad and
+xmonad-contrib]], as well as for [[https://codeberg.org/xmobar/xmobar/src/branch/master/doc/compiling.org][xmobar]], since we will be compiling both from source (not
+exactly from source, but from Hackage).
+
+You then just need to run ~stack install~ and you should be ready to go!
