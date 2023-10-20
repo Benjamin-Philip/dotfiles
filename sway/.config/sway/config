@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -195,7 +195,34 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+#
+# Exit menu:
+#
+set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+mode $exit {
+    bindsym --to-code {
+        s exec systemctl suspend, mode "default"
+        p exec systemctl poweroff
+        r exec systemctl reboot
+        l exec swaymsg exit
 
+        Return mode "default"
+        Escape mode "default"
+        $mod+x mode "default"
+    }
+}
+bindsym --to-code $mod+x mode $exit
+#
+# Screenshots:
+#
+set $screenshot-name ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+set $screenclip grim -g - $screenshot-name
+# Screenshot of the entire screen
+bindsym $mod+Print exec grim $screenshot-name
+# Screenclip
+bindsym $mod+Shift+Print exec slurp | $screenclip
+# Screenshot of current window
+bindsym Ctrl+Shift+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | $screenclip
 #
 # Status Bar:
 #
@@ -213,5 +240,10 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+#
+# Autostarts
+#
+exec --no-startup-id mako
 
 include /etc/sway/config.d/*
