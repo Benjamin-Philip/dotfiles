@@ -1,0 +1,8 @@
+#+title: Sway config
+* What?
+
+This directory contains my sway config.
+
+* Setup
+
+You will just need a system installation of sway.
