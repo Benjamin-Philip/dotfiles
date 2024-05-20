@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Editor config
-EDITOR="vim" # terminal
+EDITOR="/usr/bin/emacs -nw" # terminal
 VISUAL=e
 
 # Compilation flags
@@ -99,7 +99,7 @@ VISUAL=e
 alias dnfup="sudo dnf update"
 alias dnfupy="sudo dnf update -y"
 
-alias et="/usr/bin/emacs -nw -Q"
+alias et="/usr/bin/emacs -nw"
 
 alias rebar="rebar3"
 alias rbr="rebar3"
