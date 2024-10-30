@@ -77,6 +77,8 @@
 
 (set-fontset-font "fontset-default" 'malayalam "Noto Sans Malayalam")
 
+(setq company-show-numbers t)
+
 ;; Increase preview width
 (plist-put org-latex-preview-appearance-options :page-width 0.8)
 
