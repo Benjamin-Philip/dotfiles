@@ -70,7 +70,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git emacs bundler rake rust asdf)
+plugins=(git emacs bundler rake rust asdf direnv)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
