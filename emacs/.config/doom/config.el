@@ -94,12 +94,12 @@
 ;; Increase preview width
 (plist-put org-latex-preview-appearance-options :page-width 0.8)
 
-;; Turn on auto-mode, it's built into Org and much faster/more featured than
-;; org-fragtog. (Remember to turn off/uninstall org-fragtog.)
-(add-hook 'org-mode-hook 'org-latex-preview-auto-mode)
+;; Turn on `org-latex-preview-mode', it's built into Org and much faster/more
+;; featured than org-fragtog. (Remember to turn off/uninstall org-fragtog.)
+(add-hook 'org-mode-hook 'org-latex-preview-mode)
 
-;; Block C-n, C-p etc from opening up previews when using auto-mode
-(setq org-latex-preview-auto-ignored-commands
+;; Block C-n, C-p etc from opening up previews when using `org-latex-preview-mode'
+(setq org-latex-preview-ignored-commands
       '(next-line previous-line mwheel-scroll
         scroll-up-command scroll-down-command))
 
