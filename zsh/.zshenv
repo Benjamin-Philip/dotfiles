@@ -2,4 +2,4 @@
 
 # Add things in ~/.local/bin and ~/bin to path
 
-export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$PATH:`go env GOPATH`/bin
