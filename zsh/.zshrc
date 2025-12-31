@@ -104,6 +104,11 @@ alias et="/usr/bin/emacs -nw"
 alias rebar="rebar3"
 alias rbr="rebar3"
 
+# Erlang with extra debugging features
+export ERL_TOP="$HOME/GitHub/otp"
+alias cerl=$ERL_TOP/bin/cerl
+alias symbolize='sed -i -E '\''s/^([^(]*) \((.*\.so)\+(.{1,10})\)(.*)$/echo -n "\1in "; llvm-symbolizer -pse \2 \3 | tr -d "\\n"/e'\'
+
 [ -f "/home/bphilip/.ghcup/env" ] && source "/home/bphilip/.ghcup/env" # ghcup-env
 
 # Set number of default threads on make to 8
