@@ -79,3 +79,5 @@
   :pin nil)
 
 (unpin! org)
+
+(package! org-msg)

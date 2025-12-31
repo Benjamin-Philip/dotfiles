@@ -9,6 +9,18 @@
 (setq user-full-name "Benjamin Philip"
       user-mail-address "benjamin.philip495@gmail.com")
 
+(setq mail-user-agent 'notmuch-user-agent
+      message-send-mail-function 'message-send-mail-with-sendmail
+      sendmail-program (executable-find "gmi")
+      message-sendmail-extra-arguments '("send" "-C" "~/.mail/account.gmail"))
+
+(setq org-msg-startup "hidestars indent inlineimages"
+      org-msg-default-alternatives '((new . (text html))
+                                     (reply-to-html . (text html))
+                                     (reply-to-txt . (text)))
+      org-msg-convert-citation t
+      org-msg-signature "\n-- bp\n")
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
