@@ -113,3 +113,9 @@
 
 ;; More immediate live-previews -- the default delay is 1 second
 (setq org-latex-preview-live-debounce 0.0125)
+
+(use-package! ob-sagemath
+  :config (setq org-babel-default-header-args:sage '((:session . t)
+                                                     (:results . "output"))))
+
+(setq org-ditaa-jar-path "/usr/bin/ditaa")

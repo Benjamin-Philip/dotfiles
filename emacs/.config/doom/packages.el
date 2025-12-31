@@ -81,3 +81,6 @@
 (unpin! org)
 
 (package! org-msg)
+
+(package! sage-shell-mode)
+(package! ob-sagemath)
